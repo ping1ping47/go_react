@@ -25,10 +25,10 @@ const SubjectsList = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Subjects List</h1>
-            {isLoading && <p>Loading...</p>}
-            {error && <p>Error: {error}</p>}
+        <div style={styles.container}>
+            <h1 style={styles.heading}>Subjects List</h1>
+            {isLoading && <p style={styles.loading}>Loading...</p>}
+            {error && <p style={styles.error}>Error: {error}</p>}
             <table style={styles.table}>
                 <thead>
                     <tr style={styles.tableRow}>
@@ -52,6 +52,22 @@ const SubjectsList = () => {
 };
 
 const styles = {
+    container: {
+        margin: '20px',
+        fontFamily: 'Arial, sans-serif',
+    },
+    heading: {
+        fontSize: '24px',
+        marginBottom: '10px',
+        color: '#333',
+    },
+    loading: {
+        fontStyle: 'italic',
+        color: '#888',
+    },
+    error: {
+        color: 'red',
+    },
     table: {
         width: '100%',
         borderCollapse: 'collapse',
@@ -59,18 +75,21 @@ const styles = {
     },
     tableRow: {
         border: '1px solid #ddd',
+        transition: 'background-color 0.3s ease',
     },
     tableHeaderCell: {
         background: '#f2f2f2',
         border: '1px solid #ddd',
-        padding: '8px',
+        padding: '12px',
         textAlign: 'left',
         fontWeight: 'bold',
+        color: '#555',
     },
     tableCell: {
         border: '1px solid #ddd',
-        padding: '8px',
+        padding: '12px',
         textAlign: 'left',
+        transition: 'background-color 0.3s ease',
     },
 };
 
