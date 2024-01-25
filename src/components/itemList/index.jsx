@@ -54,10 +54,12 @@ const ItemList = () => {
 const styles = {
     container: {
         margin: '20px',
+        fontFamily: 'Arial, sans-serif',
     },
     heading: {
         fontSize: '24px',
         marginBottom: '10px',
+        color: '#333',
     },
     loading: {
         fontStyle: 'italic',
@@ -73,18 +75,21 @@ const styles = {
     },
     tableRow: {
         border: '1px solid #ddd',
+        transition: 'background-color 0.3s ease',
     },
     tableHeaderCell: {
         background: '#f2f2f2',
         border: '1px solid #ddd',
-        padding: '8px',
+        padding: '12px',
         textAlign: 'left',
         fontWeight: 'bold',
+        color: '#555',
     },
     tableCell: {
         border: '1px solid #ddd',
-        padding: '8px',
+        padding: '12px',
         textAlign: 'left',
+        transition: 'background-color 0.3s ease',
     },
 };
 
